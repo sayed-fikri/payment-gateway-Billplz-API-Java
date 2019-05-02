@@ -18,7 +18,7 @@ public class Case4 {
 
     public static void main(String[] args) throws IOException, ParseException {
 
-        BillplzConnect bc = new BillplzConnect("4e49de80-1670-4606-84f8-2f1d33a38670");
+        BillplzConnect bc = new BillplzConnect("fc2f8712-5c4f-438e-9f0f-f3092865e2eb");
         JSONParser jsonParser = new JSONParser();
 
         /**
@@ -27,14 +27,17 @@ public class Case4 {
         bc.httppost = null;
 
         List<NameValuePair> urlParameters = new ArrayList<>();
-        urlParameters.add(new BasicNameValuePair("collection_id", "ohjqe1rp"));
-        urlParameters.add(new BasicNameValuePair("description", "Test"));
-        urlParameters.add(new BasicNameValuePair("email", "test@gmail.com"));
-        urlParameters.add(new BasicNameValuePair("name", "Wan Zulkarnain"));
-        urlParameters.add(new BasicNameValuePair("amount", "500"));
+        urlParameters.add(new BasicNameValuePair("collection_id", "5p8dl8ka"));
+        urlParameters.add(new BasicNameValuePair("description", "Speerichment"));
+        urlParameters.add(new BasicNameValuePair("email", "fik.arif@gmail.com"));
+        urlParameters.add(new BasicNameValuePair("name", "Fikri"));
+        urlParameters.add(new BasicNameValuePair("amount", "15000"));
+        urlParameters.add(new BasicNameValuePair("mobile_number", "123456"));
         urlParameters.add(new BasicNameValuePair("callback_url", "http://google.com"));
-        urlParameters.add(new BasicNameValuePair("reference_1_label", "Bank Code"));
+        urlParameters.add(new BasicNameValuePair("reference_1_label", "Speericment"));
         urlParameters.add(new BasicNameValuePair("reference_1", "TES0022"));
+        urlParameters.add(new BasicNameValuePair("reference_2_label", "Child Name"));
+        urlParameters.add(new BasicNameValuePair("reference_2", "Fikri Junior"));
 
         bc.setMode("staging").setAction("createbill").setPostData(urlParameters).send(bc.getHttpAction());
 
